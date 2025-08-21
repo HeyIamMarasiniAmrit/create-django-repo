@@ -1,4 +1,5 @@
 # 🎓 Dj Project
+# This is a project everything about i learn django related 
 
 This is a Django project containing three apps: **fee**, **course**, and **result**. It serves as a foundation for a modular web application.
 
@@ -18,3 +19,5 @@ This is a Django project containing three apps: **fee**, **course**, and **resul
    cd dj-project
 
 ![Screenshot 2024-12-31 182433](https://github.com/user-attachments/assets/5b74afc8-b758-49f9-a335-92950bda8ae5)
+
+
