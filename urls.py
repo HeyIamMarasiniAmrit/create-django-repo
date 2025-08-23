@@ -14,15 +14,30 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# from django.contrib import admin
+# from django.urls import path
+
+# from app1 import views
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', views.home, name='home'),
+#     path('dj/', views.learn_django, name='learn_django'),
+#     path('py/', views.learn_python, name='learn_python'),
+#     path('lp/', views.learn_php, name='learn_php'),
+# ]
 from django.contrib import admin
 from django.urls import path
-
-from app1 import views
+from app1 import views as ap1
+from app2 import views as ap2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('dj/', views.learn_django, name='learn_django'),
-    path('py/', views.learn_python, name='learn_python'),
-    path('lp/', views.learn_php, name='learn_php'),
+    path('', ap1.home, name='home'),
+    path('app1/', ap1.myapp1, name='myapp1'),
+    path('app2/', ap2.myapp2, name='myapp2'),
+    path('app2_me/', ap2.myapp2_me, name='myapp2_me'),
+    # path('dj/', views.learn_django, name='learn_django'),
+    # path('py/', views.learn_python, name='learn_python'),
+    # path('lp/', views.learn_php, name='learn_php'),
 ]
