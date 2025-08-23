@@ -1,1 +1,11 @@
 
+app2 views 
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def myapp2(request):
+    return HttpResponse('my app 2')
+
+def myapp2_me(request):
+    return HttpResponse('my app 2 my page')
