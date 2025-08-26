@@ -24,3 +24,4 @@ def home(request):
 def myapp1(request):
     return HttpResponse('my app 1')
 
+
