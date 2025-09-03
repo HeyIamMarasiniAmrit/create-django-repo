@@ -1,10 +1,10 @@
-# 🎓 Dj Project
+# 🎓 Django Project
+
 # This is a project everything about i learn django related 
 
 This is a Django project containing three apps: **fee**, **course**, and **result**. It serves as a foundation for a modular web application.
 
 ---
-
 ## 🛠️ **Technologies Used**
 - Django
 - Python
