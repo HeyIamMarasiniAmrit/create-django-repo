@@ -5,3 +5,4 @@ class App1Config(AppConfig):
     name = 'app1'
 
 
+
