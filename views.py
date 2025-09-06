@@ -22,4 +22,5 @@ from datetime import datetime
 
 def learn_django(req):
     d = datetime.now()
+
     return render(req, 'course/django.html', context={'dt':d})
