@@ -41,3 +41,4 @@ urlpatterns = [
     # path('py/', views.learn_python, name='learn_python'),
     # path('lp/', views.learn_php, name='learn_php'),
 ]
+
