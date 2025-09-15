@@ -9,7 +9,6 @@ This is a Django project containing three apps: **fee**, **course**, and **resul
 - Django
 - Python
 
----
 
 ## 🚀 **Setup Instructions**
 
