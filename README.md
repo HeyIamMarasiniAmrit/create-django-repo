@@ -22,4 +22,3 @@ This is a Django project containing three apps: **fee**, **course**, and **resul
 
 create admin pannel
   <img width="1221" height="892" alt="Image" src="https://github.com/user-attachments/assets/a7bcd38a-a0c2-415a-9a27-0ee36c6c7d85" />
-
