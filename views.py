@@ -1,6 +1,12 @@
 from django.shortcuts import render
+from student.forms import Registration, Login
 
-# Create your views here.
-def learn_django(req):
+def registration(req):
+    fm = Registration()
+    # Pass the form instance to your template via a context dictionary
+    return render(req, 'student/registration.html', {'form': fm})
 
-    return render(req, 'course/django.html',{'nm':'django5.x'})
+
+def login(req):
+    fm = Login()
+    return render(req, 'student/login.html', {'form': fm})

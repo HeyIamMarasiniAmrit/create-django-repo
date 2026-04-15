@@ -1,8 +1,9 @@
-from django.urls import path, include
-from course.views import learn_django, learn_python
+from django.urls import path
+from student.views import registration, login
+
 
 urlpatterns = [
+    path('register/', registration, name='registration'),
+    path('login/', login, name='login'),
 
-    path('dj/', learn_django, name='django'),
-    path('py/', learn_python, name='python'),
 ]
