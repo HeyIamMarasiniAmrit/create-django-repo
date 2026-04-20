@@ -6,7 +6,12 @@
 </head>
 <body>
 <h1>login page</h1>
-{{form}}
-<input type="submit" value="login">
+{% for field in form.visible_fields %}
+{{field.label_tag}}
+{{field}}
+{% endfor %}
+{% for field in form.hidden_fields %}
+{{hidden}}
+{% endfor %}
 </body>
 </html>
