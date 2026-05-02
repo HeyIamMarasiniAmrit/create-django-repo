@@ -1,12 +1,16 @@
 from django.shortcuts import render
-from student.forms import Registration, Login
+from student.forms import Registration
+from django.http import HttpResponse
 
-def registration(req):
-    fm = Registration()
-    # Pass the form instance to your template via a context dictionary
-    return render(req, 'student/registration.html', {'form': fm})
+# Create your views here.
+def register(request):
+    if request.method =='POST':
+        form = Registration(request.POST)
+        if form.is_valid():
+            name=form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            return HttpResponse('/student/register/')
 
-
-def login(req):
-    fm = Login()
-    return render(req, 'student/login.html', {'form': fm})
+    else:
+        form = Registration()
+        return render(request,'student/register.html',{'form':form})
