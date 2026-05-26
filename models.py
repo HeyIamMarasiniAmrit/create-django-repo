@@ -7,7 +7,3 @@ class profile(models.Model):
     roll=models.IntegerField()
     state=models.CharField(max_length=70)
     comment = models.CharField(max_length=70, default='nothing')
-
-
-
-
