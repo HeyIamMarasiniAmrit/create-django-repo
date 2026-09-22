@@ -1,29 +1,9 @@
 from django import forms
+from .models import ChaiVarity
 
-# Change 'form' to 'Form'
-class Registration(forms.Form):
-    first_name = forms.CharField()
-    last_name = forms.CharField(initial="")
-    city = forms.CharField()
-    email = forms.EmailField()
-
-
-class Login(forms.Form):
-    city = forms.CharField()
-    email = forms.EmailField()
-    password = forms.CharField()
-    key=forms.CharField(widget=forms.HiddenInput())
-
-    # File and url
-    profile_image = forms.ImageField()
-    resume = forms.FileField()
-    website = forms.URLField()
-
-
-
-class Address(forms.Form):
-    name = forms.CharField()
-    city = forms.CharField()
-    state= forms.CharField()
-    pin_code = forms.IntegerField()
-    agree_terms = forms.NullBooleanField()
+class ChaiVarityForm(forms.Form):
+    # Keep the field instantiation on the same line or use standard multi-line indentation
+    chai_varity = forms.ModelChoiceField(
+        queryset=ChaiVarity.objects.all(),
+        label="Select Chai Variety"
+    )

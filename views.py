@@ -1,16 +1,13 @@
-from django.shortcuts import render
-from student.forms import Registration
 from django.http import HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
-def register(request):
-    if request.method =='POST':
-        form = Registration(request.POST)
-        if form.is_valid():
-            name=form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            return HttpResponse('/student/register/')
+def home(request):
+    # return HttpResponse("Hello , world you are dj and home page")
+    return render(request, 'website/index.html')
 
-    else:
-        form = Registration()
-        return render(request,'student/register.html',{'form':form})
+def about(request):
+    return HttpResponse("Hello , world you are dj and about page")
+
+def contact(request):
+    return HttpResponse("Hello , world you are dj and contact")
+
